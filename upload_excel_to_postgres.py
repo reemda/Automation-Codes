@@ -23,7 +23,6 @@ xl['in_person_meeting'] =xl['month_day'] +' '+ xl['year']
 xl['in_person_meeting'] =pd.to_datetime (xl['in_person_meeting'] )
 xl.drop(['Meeting', 'day','month_day','year'], axis=1,inplace=True)
 xl.rename(columns={'Manager Name':'manager_name',
-                     'GCIs':'gci',
                       'Account Name':'account_name',
                       '# In-Person Meetings YTD':'in_person_meetings_ytd',
                        '# Active Opportunities':'active_opportunities',
