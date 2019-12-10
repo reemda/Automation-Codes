@@ -47,3 +47,8 @@ for message in messages:
 # Create pandas dataframe
 emails_df=pd.DataFrame(emails)
 emails_df.head()
+
+# To move emails from inbox to a certain file 
+for message in messages:
+    if 'string' in message.Subject:
+        message.Move(inbox.Folders['inbox sub-folder name'])
